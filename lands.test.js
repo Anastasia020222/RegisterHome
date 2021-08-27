@@ -33,7 +33,7 @@ massLands.forEach((element) => {
               await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
               const currentUrl = await driver.getCurrentUrl();
               
-                expect(getParameters(currentUrl)).toStrictEqual(element[1]);
+              expect(getParameters(currentUrl)).toStrictEqual(element[1]);
 
               driver.quit();
           }, 20000);
