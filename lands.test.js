@@ -12,7 +12,7 @@ massLands.forEach((element) => {
     describe('web', () => {
 
           let driver;
-          let mail = makeid(10) + '@gmail.com';
+          let mail = makeid(10) + '@dataduck.com';
           let pass = makeid(5);
 
           test ('register', async () => {
