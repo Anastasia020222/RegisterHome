@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^92.0.1",
-    "geckodriver": "^2.0.2",
-    "jest": "^27.0.6",
+    "chromedriver": "^92.0.2",
+    "geckodriver": "^2.0.3",
+    "jest": "^27.1.0",
     "selenium-webdriver": "^3.6.0"
   }
 }

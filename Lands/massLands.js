@@ -62,5 +62,10 @@ const massLandsCardsСarousel = [
     ['GA-FX-LPL77-01-01', {}]
 ];
 
+const massLandsItem = [
+    ['FX-LPL77-01-01', ['https://blog.olymptrade.com/?lang=en']],
+]
+
+exports.massLandsItem =massLandsItem;
 exports.massLandsCards = massLandsCards;
 exports.massLands = massLands;

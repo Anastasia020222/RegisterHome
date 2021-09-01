@@ -1,8 +1,9 @@
+//проверка формы регистрации на всех лендах из массива massLands; проверка проброса диплинков после регистарции 
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
 const { scrollAndClick, scrollToElement } = require('./scroll/scrollFeatures')
 const { makeid } = require('./mail.pass/mail.pass')
-const {getParameters} = require('./url/getParameters')
-const {massLands} = require('./Lands/massLands');
+const { getParameters } = require('./url/getParameters')
+const { massLands } = require('./Lands/massLands');
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');

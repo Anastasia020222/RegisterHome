@@ -20,3 +20,4 @@ massLands.forEach((element) => {
           }, 20000);
         });
     });
+    //готово
