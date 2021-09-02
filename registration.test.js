@@ -2,7 +2,8 @@
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
 const { scrollAndClick, scrollToElement } = require('./scroll/scrollFeatures')
 const { makeid } = require('./mail.pass/mail.pass')
-const { getParameters } = require('./url/getParameters')
+const { getParameters } = require('./url/getParameters');
+const { alertIsPresent } = require('selenium-webdriver/lib/until');
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');
@@ -19,26 +20,26 @@ massLands.forEach((element) => {
           let mail = makeid(10) + '@dataduck.com';
           let pass = makeid(5);
 
-          test ('register', async () => {
-              driver = await new Builder().forBrowser('chrome').build();
-              await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
-              await driver.findElement(By.className("accept-btn")).click();
-              await scrollToElement.call(driver, '.forms');
-              await driver.findElement(By.id("register-form-1__email")).sendKeys(mail);
-              await driver.findElement(By.id("register-form-1__password")).sendKeys(pass);
-              await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-              await driver.findElement(By.className("register-form__button")).click();
+          // test ('register', async () => {
+          //     driver = await new Builder().forBrowser('chrome').build();
+          //     await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
+          //     await driver.findElement(By.className("accept-btn")).click();
+          //     await scrollToElement.call(driver, '.forms');
+          //     await driver.findElement(By.id("register-form-1__email")).sendKeys(mail);
+          //     await driver.findElement(By.id("register-form-1__password")).sendKeys(pass);
+          //     await driver.findElement(By.className("register-form__agreement-checkbox")).click();
+          //     await driver.findElement(By.className("register-form__button")).click();
 
-              await driver.wait(until.elementLocated(By.className('SvgIcon-module-host-3SE')), 20000/*ms*/);
+          //     await driver.wait(until.elementLocated(By.className('SvgIcon-module-host-3SE')), 20000/*ms*/);
 
-              await driver.findElement(By.className("SvgIcon-module-host-3SE")).click();
-              await driver.findElement(By.className("Button-module-hostColorContainedNegative-2cV")).click();
-              await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
-              const currentUrl = await driver.getCurrentUrl();
+          //     await driver.findElement(By.className("SvgIcon-module-host-3SE")).click();
+          //     await driver.findElement(By.className("Button-module-hostColorContainedNegative-2cV")).click();
+          //     await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
+          //     const currentUrl = await driver.getCurrentUrl();
               
-              expect(currentUrl).toEqual(element[1]);
+          //     expect(currentUrl).toEqual(element[1]);
 
-              await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
+          //     await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
 
         //       driver.quit();
           }, 20000);
@@ -52,7 +53,8 @@ massLands.forEach((element) => {
               await driver.findElement(By.id("register-form-1__password")).sendKeys('12345');
               await driver.findElement(By.className("register-form__agreement-checkbox")).click();
               await driver.findElement(By.className("register-form__button")).click();
+              await wait.until(alertIsPresent());
 
+            }, 20000);
           })
-    });
-});
+      // });
