@@ -22,9 +22,9 @@ massLands.forEach((element) => {
           test('', async () => {
             driver = await new Builder().forBrowser('chrome').build();
               await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
-              await driver.findElement(By.className("accept-btn")).click();
-              await scrollToElement.call(driver, '.body > div.wrapper.wrapper_v1.wrapper_en > footer');
-            //   await driver.findElement(By.className("//a[@title=Blog]")).click();
+              await driver.findElement(By.css(".accept-btn")).click();
+              await scrollToElement.call(driver, '.footer');
+              await driver.findElement(By.css("[title=Blog]")).click();
             }, 20000);
         })
 });
