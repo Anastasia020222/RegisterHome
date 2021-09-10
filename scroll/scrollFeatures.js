@@ -28,5 +28,11 @@ async function scrollAndClick(element, options = {}) {
   await element.click();
 }
 
-exports.scrollToElement = scrollToElement;
-exports.scrollAndClick = scrollAndClick;
+// exports.scrollToElement = scrollToElement;
+// exports.scrollAndClick = scrollAndClick;
+module.exports = {scrollToElement, scrollAndClick};
+
+// export {scrollToElement};
+// export {scrollAndClick};
+
+

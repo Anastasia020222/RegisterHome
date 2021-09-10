@@ -25,21 +25,20 @@ massLands.forEach((element) => {
               await driver.findElement(By.className("accept-btn")).click();
               await scrollToElement.call(driver, '.btn__fx');
               await driver.findElement(By.className("btn__fx")).click();
-              wait = WebDriverWait(driver, 10);
-              
+
               await driver.findElement(By.id("register-form-1__email")).sendKeys(mail);
               await driver.findElement(By.id("register-form-1__password")).sendKeys(pass);
               await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-              await driver.findElement(By.className("register-form__button")).click();
+            //   await driver.findElement(By.className("register-form__button")).click();
 
-              await driver.wait(until.elementLocated(By.className('SvgIcon-module-host-3SE')), 20000/*ms*/);
+            //   await driver.wait(until.elementLocated(By.className('SvgIcon-module-host-3SE')), 20000/*ms*/);
 
-              await driver.findElement(By.className("SvgIcon-module-host-3SE")).click();
-              await driver.findElement(By.className("Button-module-hostColorContainedNegative-2cV")).click();
-              await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
-              const currentUrl = await driver.getCurrentUrl();
+            //   await driver.findElement(By.className("SvgIcon-module-host-3SE")).click();
+            //   await driver.findElement(By.className("Button-module-hostColorContainedNegative-2cV")).click();
+            //   await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
+            //   const currentUrl = await driver.getCurrentUrl();
               
-              expect(currentUrl).toEqual(element[1]);
+            //   expect(currentUrl).toEqual(element[1]);
 
             }, 20000);
         })
