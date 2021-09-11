@@ -173,6 +173,24 @@ massLands.forEach((element) => {
             driver.quit();
         }, 20000);
 
+        test('ленд с локалью vn ведет на блог en', async () => {
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('vn')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'vn/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[8].blog_vi);
+                // console.log(element[0] + ' тест blog_vn пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали vn');
+            };
+            driver.quit();
+        }, 20000);
+
         test('blog_id', async () => {
             driver = await new Builder().forBrowser('chrome').build();
             if(element[2].includes('id')){
@@ -245,7 +263,7 @@ massLands.forEach((element) => {
             driver.quit();
         }, 20000);
 
-        test('ленд с локалью ko ведет на блог en', async () => { //завести баг для 79
+        test('ленд с локалью ko ведет на блог en', async () => { //завести баг для 79 и всех с локлалью ko
             driver = await new Builder().forBrowser('chrome').build();
             if(element[2].includes('ko')){
                 await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'ko/');
@@ -263,7 +281,7 @@ massLands.forEach((element) => {
             driver.quit();
         }, 20000);
 
-        test('ленд с локалью hg ведет на блог en', async () => { //завести баг для 79
+        test('ленд с локалью hg ведет на блог en', async () => { //завести баг для 79 и всех с локалью hg
             driver = await new Builder().forBrowser('chrome').build();
             if(element[2].includes('hg')){
                 await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'hg/');
@@ -277,6 +295,78 @@ massLands.forEach((element) => {
                 }
             } else{
                 console.log(element[0] + ' нет локали hg');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью br ведет на блог en', async () => { //завести баг для 79 и всех с локалью br
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('br')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'br/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[0].blog_en);
+                // console.log(element[0] + ' тест blog_hg пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали br');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью my ведет на блог ms', async () => { //завести баг для LPL65-02-01 и всех где есть локаль my
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('my')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'my/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[10].blog_ms);
+                // console.log(element[0] + ' тест blog_hg пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали my');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью ja ведет на блог en', async () => { //завести баг для 79 и всех с локалью ja
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('ja')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'ja/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[0].blog_en);
+                // console.log(element[0] + ' тест blog_hg пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали ja');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью fa ведет на блог en', async () => { //завести баг для 79 и всех с локалью ja и захватить ur и fl
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('fa')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'fa/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[0].blog_en);
+                // console.log(element[0] + ' тест blog_fa пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали fa');
             };
             driver.quit();
         }, 20000);
