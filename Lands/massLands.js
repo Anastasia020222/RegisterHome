@@ -1,6 +1,6 @@
 //все ленды
 const massLands = [
-    ['FX-LPL77-01-01', {'deeplink_action': 'trading', 'project': 'fx'}],
+    ['FX-LPL77-01-01', {'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ar', 'es', 'hg', 'id', 'ms', 'pt', 'ru', 'th', 'vi']],
     // ['GA-FX-LPL77-01-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL78-01-01', {'asset' : 'AAPL', 'deeplink_action' : 'trading', 'project' : 'fx'}],
     // ['FX-LPL78-01-02', {'asset': 'TSLA', 'deeplink_action': 'trading', 'project': 'fx'}],
@@ -18,13 +18,14 @@ const massLands = [
     // ['FX-LPL65-01-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL65-02-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL65-03-01', {'deeplink_action': 'trading', 'project': 'fx'}], 
+    // ['FX-LPL65-03-03', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-03-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-02-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-01-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-04-01', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-03-02', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['GA-FX-LPL65-03-03', {'deeplink_action': 'trading', 'project': 'fx'}],
-    // ['FX-LPL76-01-01', {'asset': 'Bitcoin', 'deeplink_action': 'trading', 'project': 'fx'}],
+    // ['FX-LPL76-01-01', {'asset': 'Bitcoin', 'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'id', 'ms', 'vi', 'pt']],
     // ['FX-LPL76-01-02', {'asset': 'GBPUSD', 'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL76-01-03', {'asset': 'EURUSD', 'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL76-01-04', {'asset': 'AAPL', 'deeplink_action': 'trading', 'project': 'fx'}],
@@ -47,6 +48,36 @@ const massLands = [
     // ['GA-FX-LPL01-02-04', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL01-01-06', {'deeplink_action': 'trading', 'project': 'fx'}],
     // ['FX-LPL01-01-03', {'deeplink_action': 'trading', 'project': 'fx'}], нет en
+    // ['LPL74-01-01', {}]
+    // ['LPL79-01-01', {}],
+    // ['LPL80-01-01', {}],
+    // ['LPL60-01-03', {}],
+    // ['LPL60-01-04', {}],
+    // ['LPL60-01-05', {}],
+    // ['GA-LPL60-01-03', {}],
+    // ['GA-LPL60-01-04', {}],
+    // ['LPL54-01-01', {}],
+    // ['LPL54-02-01', {}],
+    // ['LPL54-03-01', {}],
+    // ['GA-LPL54-01-01', {}],
+    // ['GA-LPL54-02-01', {}],
+    // ['GA-LPL54-03-01', {}],
+    // ['LPL47-01-01', {}],
+    // ['LPL47-01-02', {}],
+    // ['LPL47-02-01', {}],
+    // ['LPL47-02-02', {}],
+    // ['LPL47-03-01', {}],
+    // ['LPL47-03-02', {}],
+    // ['LPL47-04-01', {}],
+    // ['LPL47-04-02', {}],
+    // ['GA-LPL47-01-01', {}],
+    // ['GA-LPL47-01-02', {}],
+    // ['GA-LPL47-02-01', {}],
+    // ['GA-LPL47-02-02', {}],
+    // ['GA-LPL47-03-01', {}],
+    // ['GA-LPL47-03-02', {}],
+    // ['GA-LPL47-04-01', {}],
+    // ['GA-LPL47-04-02', {}],
 
 ];  
 
@@ -62,10 +93,10 @@ const massLandsCardsСarousel = [
     ['GA-FX-LPL77-01-01', {}]
 ];
 
-const massLandsItem = [
-    ['FX-LPL77-01-01', ['https://blog.olymptrade.com/?lang=en']],
-]
+// const massLandsItem = [
+//     ['FX-LPL77-01-01', 'https://blog.olymptrade.com/?lang=en'],
+// ]
 
-exports.massLandsItem =massLandsItem;
+// exports.massLandsItem =massLandsItem;
 exports.massLandsCards = massLandsCards;
 exports.massLands = massLands;

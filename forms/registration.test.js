@@ -20,25 +20,6 @@ massLands.forEach((element) => {
           let mail = makeid(10) + '@dataduck.com';
           let pass = makeid(5);
 
-          test('такой email уже существует', async () => {
-            driver = await new Builder().forBrowser('chrome').build();
-              await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
-              await driver.findElement(By.className("accept-btn")).click();
-              await scrollToElement.call(driver, '.forms');
-              await driver.findElement(By.id("register-form-1__email")).sendKeys('test_user@dataduck.com');
-              await driver.findElement(By.id("register-form-1__password")).sendKeys('12345');
-              await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-              await driver.findElement(By.className("register-form__button")).click();
-              await driver.wait(until.alertIsPresent());
-              let alert = await driver.switchTo().alert();
-              // let alertText = await alert.getText();
-              // expect(alertText).toBe('Пользователь уже существует. Сейчас вы будете перенаправлены на торговую платформу.');
-              await alert.accept();
-              const currentUrl = await driver.getCurrentUrl();
-              expect(currentUrl).toBe(element[1]);
-
-            }, 20000);
-
           test ('регистрация нового пользователя', async () => {
               driver = await new Builder().forBrowser('chrome').build();
               await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');

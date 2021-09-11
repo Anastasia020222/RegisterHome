@@ -37,7 +37,7 @@ massLands.forEach((element) => {
               await driver.findElement(By.css(".accept-btn")).click();
               await scrollToElement.call(driver, '.footer');
               await driver.findElement(By.css("[title=Blog]")).click();
-              
+    
             }, 20000);
 
           test('Instagram', async () => {
