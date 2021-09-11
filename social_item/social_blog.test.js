@@ -1,7 +1,7 @@
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
 const { scrollAndClick, scrollToElement } = require('../scroll/scrollFeatures');
 const {massLands} = require('../Lands/massLands');
-const {massItemBlog, massItemTwitter, massItemYoutube, massItemFacebook, massItemInstagram} = require('../Lands/massItem');
+const {massItemBlog} = require('../Lands/massItem');
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');
@@ -20,7 +20,7 @@ massLands.forEach((element) => {
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
                 expect(currentUrl).toBe(massItemBlog[0].blog_en);
-                console.log(element[0] + ' тест blog_en пройден')
+                // console.log(element[0] + ' тест blog_en пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали en');
@@ -39,7 +39,7 @@ massLands.forEach((element) => {
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
                 expect(currentUrl).toBe(massItemBlog[1].blog_es);
-                console.log(element[0] + ' тест blog_es пройден')
+                // console.log(element[0] + ' тест blog_es пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали es');
@@ -57,7 +57,7 @@ massLands.forEach((element) => {
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
                 expect(currentUrl).toBe(massItemBlog[2].blog_ar);
-                console.log(element[0] + ' тест blog_ar пройден')
+                // console.log(element[0] + ' тест blog_ar пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали ar');
@@ -74,8 +74,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_ru);
-                console.log(element[0] + ' тест blog_ru пройден')
+                expect(currentUrl).toBe(massItemBlog[3].blog_ru);
+                // console.log(element[0] + ' тест blog_ru пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали ru');
@@ -92,8 +92,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_pt);
-                console.log(element[0] + ' тест blog_pt пройден')
+                expect(currentUrl).toBe(massItemBlog[4].blog_pt);
+                // console.log(element[0] + ' тест blog_pt пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали pt');
@@ -110,8 +110,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_tr);
-                console.log(element[0] + ' тест blog_tr пройден')
+                expect(currentUrl).toBe(massItemBlog[5].blog_tr);
+                // console.log(element[0] + ' тест blog_tr пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали tr');
@@ -128,8 +128,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_fr);
-                console.log(element[0] + ' тест blog_fr пройден')
+                expect(currentUrl).toBe(massItemBlog[6].blog_fr);
+                // console.log(element[0] + ' тест blog_fr пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали fr');
@@ -146,8 +146,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_th);
-                console.log(element[0] + ' тест blog_th пройден')
+                expect(currentUrl).toBe(massItemBlog[7].blog_th);
+                // console.log(element[0] + ' тест blog_th пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали th');
@@ -164,8 +164,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_vi);
-                console.log(element[0] + ' тест blog_vi пройден')
+                expect(currentUrl).toBe(massItemBlog[8].blog_vi);
+                // console.log(element[0] + ' тест blog_vi пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали vi');
@@ -182,8 +182,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_id);
-                console.log(element[0] + ' тест blog_id пройден')
+                expect(currentUrl).toBe(massItemBlog[9].blog_id);
+                // console.log(element[0] + ' тест blog_id пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали id');
@@ -200,8 +200,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_ms);
-                console.log(element[0] + ' тест blog_ms пройден')
+                expect(currentUrl).toBe(massItemBlog[10].blog_ms);
+                // console.log(element[0] + ' тест blog_ms пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали ms');
@@ -218,8 +218,8 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_zh);
-                console.log(element[0] + ' тест blog_zh пройден')
+                expect(currentUrl).toBe(massItemBlog[11].blog_zh);
+                // console.log(element[0] + ' тест blog_zh пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали zh');
@@ -236,11 +236,47 @@ massLands.forEach((element) => {
                 await driver.findElement(By.css("[title=Blog]")).click();
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
-                expect(currentUrl).toBe(massItemBlog[2].blog_hi);
-                console.log(element[0] + ' тест blog_hi пройден')
+                expect(currentUrl).toBe(massItemBlog[12].blog_hi);
+                // console.log(element[0] + ' тест blog_hi пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали hi');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью ko ведет на блог en', async () => { //завести баг для 79
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('ko')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'ko/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[0].blog_en);
+                // console.log(element[0] + ' тест blog_ko пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали ko');
+            };
+            driver.quit();
+        }, 20000);
+
+        test('ленд с локалью hg ведет на блог en', async () => { //завести баг для 79
+            driver = await new Builder().forBrowser('chrome').build();
+            if(element[2].includes('hg')){
+                await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'hg/');
+                await driver.findElement(By.css(".accept-btn")).click();
+                await scrollToElement.call(driver, '.footer');
+                await driver.findElement(By.css("[title=Blog]")).click();
+                const currentUrl = await driver.getCurrentUrl();
+                for(index in massItemBlog){
+                expect(currentUrl).toBe(massItemBlog[0].blog_en);
+                // console.log(element[0] + ' тест blog_hg пройден')
+                }
+            } else{
+                console.log(element[0] + ' нет локали hg');
             };
             driver.quit();
         }, 20000);

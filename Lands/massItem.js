@@ -15,8 +15,8 @@ const massItemBlog = [
 ];
 
 const massItemTwitter = [
-    {twitter_en: 'https://twitter.com/OlympTrade'},
-    {twitter_en: 'https://twitter.com/OlympTrade'},
+    {twitter_en: 'https://twitter.com/OlympTrade?'},
+    {twitter_ru: 'https://twitter.com/OlympTrade?'},
     {twitter_id: 'https://twitter.com/id_olymptrade'},
     {twitter_th: 'https://twitter.com/th_olymptrade'},
     {twitter_br: 'https://twitter.com/br_olymptrade'},
