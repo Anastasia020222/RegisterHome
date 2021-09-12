@@ -7,10 +7,15 @@ require('selenium-webdriver/firefox');
 require('chromedriver');
 require('geckodriver');
 
+beforeAll(() => {
+    driver = await new Builder()
+    .forBrowser('chrome')
+    .build();
+})
 massLands.forEach((element) => {
     describe('web', () => {
         test('blog_en', async () => {
-            driver = await new Builder().forBrowser('chrome').build();
+            // driver = await new Builder().forBrowser('chrome').build();
             console.log(element[2].includes('es'))
             if(element[2].includes('en')){
                 await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
@@ -30,7 +35,6 @@ massLands.forEach((element) => {
 
         test('blog_es', async () => {
             driver = await new Builder().forBrowser('chrome').build();
-            console.log(element[2].includes('es'))
             if(element[2].includes('es')){
                 await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'es/');
                 await driver.findElement(By.css(".accept-btn")).click();
@@ -39,7 +43,6 @@ massLands.forEach((element) => {
                 const currentUrl = await driver.getCurrentUrl();
                 for(index in massItemBlog){
                 expect(currentUrl).toBe(massItemBlog[1].blog_es);
-                // console.log(element[0] + ' тест blog_es пройден')
                 }
             } else{
                 console.log(element[0] + ' нет локали es');
