@@ -4,12 +4,12 @@ const massItemBlog = [
     {blog_ar: 'https://blog.olymptrade.com/ar/'},
     {blog_ru: 'https://blog.olymptrade.com/ru/'},
     {blog_pt: 'https://blog.olymptrade.com/pt/'},
-    {blog_tr: 'https://blog.olymptrade-tr4.com/tr/'},
+    {blog_tr: 'https://blog.olymptrade.com/tr/'},
     {blog_fr: 'https://blog.olymptrade.com/fr/'},
     {blog_th: 'https://blog.olymptrade.com/th/'},
     {blog_vi: 'https://blog.olymptrade.com/vi/'},
-    {blog_id: 'https://blog.olymptrade-idm.com/id/'},
-    {blog_ms: 'https://blog.olymptrade-my.com/ms/'},
+    {blog_id: 'https://blog.olymptrade.com/id/'},
+    {blog_ms: 'https://blog.olymptrade.com/ms/'},
     {blog_zh: 'https://blog.olymptrade.com/zh/'},
     {blog_hi: 'https://blog.olymptrade.com/hi/'}
 ];

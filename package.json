@@ -11,7 +11,7 @@
   "devDependencies": {
     "chromedriver": "^92.0.2",
     "geckodriver": "^2.0.4",
-    "jest": "^27.1.1",
+    "jest": "^27.2.0",
     "selenium-webdriver": "^3.6.0"
   }
 }
