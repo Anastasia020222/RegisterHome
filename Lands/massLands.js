@@ -2,7 +2,8 @@
 const massLands = [
     // ['FX-LPL77-01-01', {'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ar', 'es', 'hg', 'id', 'ms', 'pt', 'ru', 'th', 'vi']],
     // ['GA-FX-LPL77-01-01', {'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ar', 'es', 'hg', 'id', 'ms', 'pt', 'ru', 'th', 'vi']],
-    ['FX-LPL78-01-01', {'asset' : 'AAPL', 'deeplink_action' : 'trading', 'project' : 'fx'}, ['en', 'ru', 'ar', 'es', 'hg', 'id', 'ko', 'ms', 'pt', 'th', 'vi']],
+    ['FX-LPL78-01-01', {'asset' : 'AAPL', 'deeplink_action' : 'trading', 'project' : 'fx'}, ['en']],
+    // ['FX-LPL78-01-01', {'asset' : 'AAPL', 'deeplink_action' : 'trading', 'project' : 'fx'}, ['en', 'ru', 'ar', 'es', 'hg', 'id', 'ko', 'ms', 'pt', 'th', 'vi']],
     // ['FX-LPL78-01-02', {'asset': 'TSLA', 'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ru', 'ar', 'es', 'hg', 'id', 'ko', 'ms', 'pt', 'th', 'vi']], 
     // ['FX-LPL78-01-03', {'asset': 'AMD', 'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ru', 'ar', 'es', 'hg', 'id', 'ko', 'ms', 'pt', 'th', 'vi']],
     // ['FX-LPL78-01-04', {'asset': 'NFLX', 'deeplink_action': 'trading', 'project': 'fx'}, ['en', 'ru', 'ar', 'es', 'hg', 'id', 'ko', 'ms', 'pt', 'th', 'vi']],

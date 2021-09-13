@@ -25,6 +25,25 @@ massLands.forEach((element) => {
         await driver.get('https://static.olymptrade.com/lands/'+ element[0] + e + '/');
         const currentUrl = await driver.getCurrentUrl();
         console.log(currentUrl)
+        if(element[2] = true) {
+          await driver.findElement(By.css(".accept-btn")).click();
+          await scrollToElement.call(driver, '.footer');
+          await driver.findElement(By.css("[title=Blog]")).click();
+          await driver.wait(until.elementLocated(By.css('[class=header-logo-container]')), 20000/*ms*/);
+          const currentUrl = await driver.getCurrentUrl();
+
+          if(element[2] = 'en'){
+
+          for(index in massItemBlog){
+          expect(currentUrl).toBe(massItemBlog[0].blog_en);
+            // console.log(element[0] + ' тест blog_en пройден')
+          }
+        } else{
+            console.log(element[0] + ' нет локали en');
+        }
+        }else{
+          console.log('такой локали у' + element[0] + 'нет')
+        }
       }, 20000)
 
         afterAll(() => 
