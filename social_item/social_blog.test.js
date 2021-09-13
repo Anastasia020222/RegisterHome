@@ -8,7 +8,11 @@ require('chromedriver');
 require('geckodriver');
 
 massLands.forEach((element) => {
+
+    const URL = 'https://static.olymptrade.com/lands/'+ element[0] +'en/';
+
     describe('web', () => {
+        let driver;
 
         beforeAll( async () => {
             driver = await new Builder()
