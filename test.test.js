@@ -1,9 +1,8 @@
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
-const { scrollAndClick, scrollToElement } = require('./scroll/scrollFeatures')
-const { getParameters } = require('./url/getParameters');
+const { scrollAndClick, scrollToElement } = require('./scroll/scrollFeatures');
 const { alertIsPresent } = require('selenium-webdriver/lib/until');
 const {massLands} = require('./Lands/massLands');
-const {massItemBlog} = require('./Lands/massItem');
+const {massItemBlog, massItemTwitter} = require('./Lands/massItem');
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');
@@ -19,54 +18,60 @@ massLands.forEach((element) => {
           driver = await new Builder()
           .forBrowser('chrome')
           .build();
-      })
+      });
 
       test('test', async () => {
         await driver.get('https://static.olymptrade.com/lands/'+ element[0] + e + '/');
+        await driver.findElement(By.css('.accept-btn')).click();
+        await scrollToElement.call(driver, '.footer');
+        await driver.findElement(By.css('[title=Blog]')).click();
+        // await driver.findElement(By.css("[title=Twitter]")).click();
         const currentUrl = await driver.getCurrentUrl();
-        console.log(currentUrl)
-        if(element[2] = true) {
-          await driver.findElement(By.css(".accept-btn")).click();
-          await scrollToElement.call(driver, '.footer');
-          await driver.findElement(By.css("[title=Blog]")).click();
-          await driver.wait(until.elementLocated(By.css('[class=header-logo-container]')), 20000/*ms*/);
-          const currentUrl = await driver.getCurrentUrl();
-
-          if(element[2] = 'en'){
-
-          for(index in massItemBlog){
-          expect(currentUrl).toBe(massItemBlog[0].blog_en);
-            // console.log(element[0] + ' тест blog_en пройден')
+        
+        for(index in massItemBlog){
+          switch(e){
+            case 'en': 
+              expect(currentUrl).toBe(massItemBlog[0].blog_en);
+              // console.log(currentUrl);
+                  try
+                  {
+                    await driver.findElement(By.className('logo-container')).Displayed;
+                    let element = await driver.FindElement(By.className('logo-container')).Displayed;
+                    console.log(element)
+                    console.log(1);
+                  }
+                  catch (StaleElementReferenceException)
+                  {
+                    console.log(2);
+                  }
+              // try {
+              //   if(driver.findElement(By.className('logo-container')).size > 0){
+              //     console.log('элемент есть')
+              //   } else {
+              //   console.log('элемента нет')
+              //   }
+              // } catch {
+              //   console.log('элемента нет')
+              // }
+              break;
+            // case 'es':
+            //   expect(currentUrl).toBe(massItemBlog[1].blog_es);
+            //   console.log(currentUrl);
+            //   break;
+            // case 'ar':
+            //   expect(currentUrl).toBe(massItemBlog[2].blog_ar);
+            //   console.log(currentUrl);
+            //   break;
+            default:
+              console.log('проверки нет для локали ' + e);
           }
-        } else{
-            console.log(element[0] + ' нет локали en');
-        }
-        }else{
-          console.log('такой локали у' + element[0] + 'нет')
-        }
-      }, 20000)
-
-        afterAll(() => 
-        driver.quit()
-        );
+          break;
+        };
+      }, 20000);
+      
+      afterAll(() => 
+      driver.quit()
+      );
     });
+  });
 });
-});
-//       test('blog_en', async () => {
-//         if(element[2].includes('en')){
-//             await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
-//             await driver.findElement(By.css(".accept-btn")).click();
-//             await scrollToElement.call(driver, '.footer');
-//             await driver.findElement(By.css("[title=Blog]")).click();
-//             await driver.wait(until.elementLocated(By.css('[class=header-logo-container]')), 20000/*ms*/);
-//             const currentUrl = await driver.getCurrentUrl();
-//             for(index in massItemBlog){
-//             expect(currentUrl).toBe(massItemBlog[0].blog_en);
-//             // console.log(element[0] + ' тест blog_en пройден')
-//             }
-//         } else{
-//             console.log(element[0] + ' нет локали en');
-//         };
-//     }, 20000);
-//   })
-// });
