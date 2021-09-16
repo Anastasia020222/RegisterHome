@@ -1,7 +1,7 @@
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
 const { scrollAndClick, scrollToElement } = require('../scroll/scrollFeatures');
 const {massLands} = require('../Lands/massLands');
-const {massItemTwitter} = require('../Lands/massItem');
+const {massItemYoutube} = require('../Lands/massItem');
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');
@@ -21,93 +21,93 @@ massLands.forEach((element) => {
                 .build();
             })
     
-        test('Тестирование ссылки twitter ' + locale, async () => {
+        test('Тестирование ссылки YouTube ' + locale, async () => {
             await driver.get(URL);
             await driver.findElement(By.css(".accept-btn")).click();
             await scrollToElement.call(driver, '.footer');
-            await driver.findElement(By.css("[title=Twitter]")).click();
+            await driver.findElement(By.css("[title=YouTube]")).click();
             const currentUrl = await driver.getCurrentUrl();
 
-            for(index in massItemTwitter){
+            for(index in massItemYoutube){
                 switch(locale){
                     case 'en':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'es':
-                        expect(currentUrl).toBe(massItemTwitter[5].twitter_la);
+                        expect(currentUrl).toBe(massItemYoutube[7].youtube_es);
                         console.log(currentUrl);
                     break;
                     case 'ar':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
-                    case 'ru':
-                        expect(currentUrl).toBe(massItemTwitter[1].twitter_ru);
+                    case 'ru' || '':
+                        expect(currentUrl).toBe(massItemYoutube[1].youtube_ru);
                         console.log(currentUrl);
                     break;
                     case 'pt':
-                        expect(currentUrl).toBe(massItemTwitter[4].twitter_br);
+                        expect(currentUrl).toBe(massItemYoutube[6].youtube_pt);
                         console.log(currentUrl);
                     break;
                     case 'tr':
-                        expect(currentUrl).toBe(massItemTwitter[7].twitter_tr);
+                        expect(currentUrl).toBe(massItemYoutube[4].youtube_tr);
                         console.log(currentUrl);
                     break;
                     case 'fr':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'th':
-                        expect(currentUrl).toBe(massItemTwitter[3].twitter_th);
+                        expect(currentUrl).toBe(massItemYoutube[3].youtube_th);
                         console.log(currentUrl);
                     break;
                     case 'vi':
-                          expect(currentUrl).toBe(massItemTwitter[6].twitter_vi);
+                          expect(currentUrl).toBe(massItemYoutube[5].youtube_vi);
                           console.log(currentUrl);
                     break;
                     case 'vn':
-                        expect(currentUrl).toBe(massItemTwitter[6].twitter_vi);
+                        expect(currentUrl).toBe(massItemYoutube[5].youtube_vi);
                         console.log(currentUrl);
                     break;
                     case 'id':
-                        expect(currentUrl).toBe(massItemTwitter[2].twitter_id);
+                        expect(currentUrl).toBe(massItemYoutube[2].youtube_id);
                         console.log(currentUrl);
                     break;
                     case 'ms':
-                        expect(currentUrl).toBe(massItemTwitter[8].twitter_ms);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'zh':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'hi':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'ko':
-                        expect(currentUrl).toBe(massItemTwitter[0].blog_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'hg':
-                        expect(currentUrl).toBe(massItemTwitter[0].blog_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'br':
-                        expect(currentUrl).toBe(massItemTwitter[4].twitter_br);
+                        expect(currentUrl).toBe(massItemYoutube[6].youtube_pt);
                         console.log(currentUrl);
                     break;
                     case 'my':
-                        expect(currentUrl).toBe(massItemTwitter[8].twitter_ms);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'ja':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     case 'fa':
-                        expect(currentUrl).toBe(massItemTwitter[0].twitter_en);
+                        expect(currentUrl).toBe(massItemYoutube[0].youtube_en);
                         console.log(currentUrl);
                     break;
                     default:

@@ -8,8 +8,9 @@ require('chromedriver');
 require('geckodriver');
 
 massLands.forEach((element) => {
+  element[2].forEach((locale) => {
 
-    const URL = 'https://static.olymptrade.com/lands/'+ element[0] +'en/';
+    const URL = 'https://static.olymptrade.com/lands/'+ element[0] + locale + '/';
 
     describe('web', () => {
         let driver;
@@ -20,8 +21,8 @@ massLands.forEach((element) => {
             .build();
         })
 
-        test('test', async () => {
-            await driver.get('https://static.olymptrade.com/lands/'+ element[0] + e + '/');
+        test('Тестирование ссылки Blog ' + locale, async () => {
+            await driver.get(URL);
             await driver.findElement(By.css('.accept-btn')).click();
             await scrollToElement.call(driver, '.footer');
             await driver.findElement(By.css('[title=Blog]')).click();
@@ -29,7 +30,7 @@ massLands.forEach((element) => {
             const currentUrl = await driver.getCurrentUrl();
             
             for(index in massItemBlog){
-              switch(e){
+              switch(locale){
                 case 'en': 
                   expect(currentUrl).toBe(massItemBlog[0].blog_en);
                   console.log(currentUrl);
@@ -111,8 +112,9 @@ massLands.forEach((element) => {
                   console.log(currentUrl);
                   break;
                 default:
-                  console.log('проверки нет')
+                  console.log('Нет проверки для локали ' + locale)
               }
+            
               break;
             };
           }, 20000);
@@ -121,4 +123,5 @@ massLands.forEach((element) => {
         driver.quit()
         );
     });
+});
 });

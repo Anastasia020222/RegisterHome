@@ -17,24 +17,24 @@ const massItemBlog = [
 const massItemTwitter = [
     {twitter_en: 'https://twitter.com/OlympTrade?'},
     {twitter_ru: 'https://twitter.com/OlympTrade?'},
-    {twitter_id: 'https://twitter.com/id_olymptrade'},
-    {twitter_th: 'https://twitter.com/th_olymptrade'},
-    {twitter_br: 'https://twitter.com/br_olymptrade'},
-    {twitter_la: 'https://twitter.com/la_olymptrade'},
-    {twitter_vn: 'https://twitter.com/vn_olymptrade'},
-    {twitter_tr: 'https://twitter.com/tr_olymptrade'},
-    {twitter_my: 'https://twitter.com/my_olymptrade'}
+    {twitter_id: 'https://twitter.com/id_olymptrade?'},
+    {twitter_th: 'https://twitter.com/th_olymptrade?'},
+    {twitter_br: 'https://twitter.com/br_olymptrade?'},
+    {twitter_la: 'https://twitter.com/la_olymptrade?'},
+    {twitter_vi: 'https://twitter.com/vn_olymptrade?'},
+    {twitter_tr: 'https://twitter.com/tr_olymptrade?'},
+    {twitter_ms: 'https://twitter.com/my_olymptrade?'}
 ];
 
 const massItemYoutube = [
-    {youtube_ru: 'https://www.youtube.com/channel/UCfLuTumP4Tz8SPCMuDcnLOw'},
-    {youtube_en: 'https://www.youtube.com/channel/UCY6DeO0JlJ8dcdWPX9DDzRg'},
-    {youtube_id: 'https://www.youtube.com/channel/UCZdir0WAhlIrWfi3quG5wOw'},
-    {youtube_th: 'https://www.youtube.com/channel/UC0I2-erMwjLQ9jnhVQFb_Fg'},
-    {youtube_tr: 'https://www.youtube.com/channel/UC_db-a3DV82tMcmIY7__ULg'},
-    {youtube_vi: 'https://www.youtube.com/channel/UCSAyBAu2P5x_Y4uDWVVbFaA'},
-    {youtube_pt: 'https://www.youtube.com/channel/UCEXOIUcTVUMD-BJ_6pHnZQg'},
-    {youtube_es: 'https://www.youtube.com/channel/UC96LlK1ysynlkWDcJQtBehw'}
+    {youtube_en: 'https://www.youtube.com/channel/UCY6DeO0JlJ8dcdWPX9DDzRg?'},
+    {youtube_ru: 'https://www.youtube.com/channel/UCfLuTumP4Tz8SPCMuDcnLOw?'},
+    {youtube_id: 'https://www.youtube.com/channel/UCZdir0WAhlIrWfi3quG5wOw?'},
+    {youtube_th: 'https://www.youtube.com/channel/UC0I2-erMwjLQ9jnhVQFb_Fg?'},
+    {youtube_tr: 'https://www.youtube.com/channel/UC_db-a3DV82tMcmIY7__ULg?'},
+    {youtube_vi: 'https://www.youtube.com/channel/UCSAyBAu2P5x_Y4uDWVVbFaA?'},
+    {youtube_pt: 'https://www.youtube.com/channel/UCEXOIUcTVUMD-BJ_6pHnZQg?'},
+    {youtube_es: 'https://www.youtube.com/channel/UC96LlK1ysynlkWDcJQtBehw?'}
 ];
 
 const massItemFacebook = [

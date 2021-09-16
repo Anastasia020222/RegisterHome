@@ -33,26 +33,23 @@ massLands.forEach((element) => {
             case 'en': 
               expect(currentUrl).toBe(massItemBlog[0].blog_en);
               // console.log(currentUrl);
-                  try
-                  {
-                    await driver.findElement(By.className('logo-container')).Displayed;
-                    let element = await driver.FindElement(By.className('logo-container')).Displayed;
-                    console.log(element)
-                    console.log(1);
-                  }
-                  catch (StaleElementReferenceException)
-                  {
-                    console.log(2);
-                  }
-              // try {
-              //   if(driver.findElement(By.className('logo-container')).size > 0){
-              //     console.log('элемент есть')
-              //   } else {
-              //   console.log('элемента нет')
-              //   }
-              // } catch {
-              //   console.log('элемента нет')
-              // }
+              if(driver.findElement){
+                await driver.findElement(By.className('css-901oao'));
+                console.log(1);
+              } else {
+                console.log(2);
+              }
+                  // try 
+                  // {
+                  //   await driver.findElement(By.className('css-901oao')).Displayed;
+                  //   // const element = await driver.FindElement(By.className('logo-container')).Displayed;
+                  //   // console.log(element)
+                  //   console.log(1);
+                  // }
+                  // catch (StaleElementReferenceException)
+                  // {
+                  //   console.log(2);
+                  // }
               break;
             // case 'es':
             //   expect(currentUrl).toBe(massItemBlog[1].blog_es);
