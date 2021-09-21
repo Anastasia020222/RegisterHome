@@ -1,8 +1,8 @@
 //проверка скроллинга до реги и регистрация с соответствующим диплинком 
 const { Builder, By, Key, until, WebElement, Condition } = require('selenium-webdriver');
-const { scrollAndClick, scrollToElement } = require('./scroll/scrollFeatures')
-const { makeid } = require('./mail.pass/mail.pass')
-const { getParameters } = require('./url/getParameters')
+const { scrollAndClick, scrollToElement } = require('../scroll/scrollFeatures')
+const { makeid } = require('../mail.pass/mail.pass')
+const { getParameters } = require('../url/getParameters')
 require('selenium-webdriver/chrome');
 require('selenium-webdriver/firefox');
 require('chromedriver');

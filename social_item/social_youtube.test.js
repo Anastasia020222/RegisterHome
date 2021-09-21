@@ -23,9 +23,9 @@ massLands.forEach((element) => {
     
         test('Тестирование ссылки YouTube ' + locale, async () => {
             await driver.get(URL);
-            await driver.findElement(By.css(".accept-btn")).click();
+            await driver.findElement(By.css('.accept-btn')).click();
             await scrollToElement.call(driver, '.footer');
-            await driver.findElement(By.css("[title=YouTube]")).click();
+            await driver.findElement(By.css('[title=YouTube]')).click();
             const currentUrl = await driver.getCurrentUrl();
 
             for(index in massItemYoutube){

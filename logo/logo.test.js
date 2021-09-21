@@ -11,8 +11,8 @@ massLands.forEach((element) => {
           test ('logo', async () => {
               driver = await new Builder().forBrowser('chrome').build();
               await driver.get('https://static.olymptrade.com/lands/'+ element[0] +'en/');
-              driver.findElement(By.css(".header__logo")).isEnabled();
-              await driver.findElement(By.css(".header__logo")).click();
+              driver.findElement(By.css('.header__logo')).isEnabled();
+              await driver.findElement(By.css('.header__logo')).click();
 
               // await driver.wait(until.elementLocated(By.xpath("//span[contains(.,'Register to Continue')]")), 20000/*ms*/);
               const currentUrl = await driver.getCurrentUrl();

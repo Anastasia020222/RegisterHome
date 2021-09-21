@@ -25,12 +25,12 @@ massLands.forEach((element) => {
         
         test('такой email уже существует', async () => {
             await driver.get(URL);
-            await driver.findElement(By.className("accept-btn")).click();
+            await driver.findElement(By.className('accept-btn')).click();
             await scrollToElement.call(driver, '.forms');
             await driver.findElement(By.id('register-form-1__email')).sendKeys('test_user@dataduck.com');
-            await driver.findElement(By.id("register-form-1__password")).sendKeys('12345');
-            await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-            await driver.findElement(By.className("register-form__button")).click();
+            await driver.findElement(By.id('register-form-1__password')).sendKeys('12345');
+            await driver.findElement(By.className('register-form__agreement-checkbox')).click();
+            await driver.findElement(By.className('register-form__button')).click();
             await driver.wait(until.alertIsPresent());
             let alert = await driver.switchTo().alert();
             // let alertText = await alert.getText();
@@ -42,30 +42,30 @@ massLands.forEach((element) => {
 
         test ('регистрация нового пользователя', async () => {
             await driver.get(URL);
-            await driver.findElement(By.className("accept-btn")).click();
+            await driver.findElement(By.className('accept-btn')).click();
             await scrollToElement.call(driver, '.forms');
-            await driver.findElement(By.id("register-form-1__email")).sendKeys(mail);
-            await driver.findElement(By.id("register-form-1__password")).sendKeys(pass);
-            await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-            await driver.findElement(By.className("register-form__button")).click();
+            await driver.findElement(By.id('register-form-1__email')).sendKeys(mail);
+            await driver.findElement(By.id('register-form-1__password')).sendKeys(pass);
+            await driver.findElement(By.className('register-form__agreement-checkbox')).click();
+            await driver.findElement(By.className('register-form__button')).click();
 
             await driver.wait(until.elementLocated(By.className('SvgIcon-module-host-3SE')), 20000/*ms*/);
 
             const currentUrl = await driver.getCurrentUrl();
             expect(getParameters(currentUrl)).toStrictEqual(element[1]);
 
-            await driver.findElement(By.className("SvgIcon-module-host-3SE")).click();
-            await driver.findElement(By.className("Button-module-hostColorContainedNegative-2cV")).click();
-            await driver.findElement(By.className("Button-module-hostColorContainedAccent-24t")).click();
+            await driver.findElement(By.className('SvgIcon-module-host-3SE')).click();
+            await driver.findElement(By.className('Button-module-hostColorContainedNegative-2cV')).click();
+            await driver.findElement(By.className('Button-module-hostColorContainedAccent-24t')).click();
         }, 20000);
 
         test('регистрация пользователя, зарегистрированного ранее и есть куки', async () => {
             await driver.get(URL);
             await scrollToElement.call(driver, '.forms');
-            await driver.findElement(By.id("register-form-1__email")).sendKeys(mail);
-            await driver.findElement(By.id("register-form-1__password")).sendKeys(pass);
-            await driver.findElement(By.className("register-form__agreement-checkbox")).click();
-            await driver.findElement(By.className("register-form__button")).click();
+            await driver.findElement(By.id('register-form-1__email')).sendKeys(mail);
+            await driver.findElement(By.id('register-form-1__password')).sendKeys(pass);
+            await driver.findElement(By.className('register-form__agreement-checkbox')).click();
+            await driver.findElement(By.className('register-form__button')).click();
 
             await driver.wait(until.alertIsPresent());
             let alert = await driver.switchTo().alert();

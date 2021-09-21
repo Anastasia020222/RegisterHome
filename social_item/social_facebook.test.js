@@ -23,9 +23,9 @@ massLands.forEach((element) => {
     
         test('Тестирование ссылки Facebook ' + locale, async () => {
             await driver.get(URL);
-            await driver.findElement(By.css(".accept-btn")).click();
+            await driver.findElement(By.css('.accept-btn')).click();
             await scrollToElement.call(driver, '.footer');
-            await driver.findElement(By.css("[title=Facebook]")).click();
+            await driver.findElement(By.css('[title=Facebook]')).click();
             const currentUrl = await driver.getCurrentUrl();
 
             for(index in massItemFacebook){
